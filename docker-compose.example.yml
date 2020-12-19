@@ -3,9 +3,9 @@ services:
   pyrocdn_mail:
     container_name: pyrocdn-mail-service
     build:
-       context: .
-       dockerfile: Dockerfile
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./src:/service/src
     ports:
       - 4200:4200
-    volumes:
-      - ./src:/src
