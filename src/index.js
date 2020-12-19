@@ -23,6 +23,7 @@ const connect = () => {
       await (new Promise(resolve => {
         setTimeout(resolve, 5000)
       }))
+      console.log('[SERVICE] Mail failed to connect.')
       return connect()
     }
     console.log('[SERVICE] Mail ready')
@@ -51,11 +52,11 @@ setInterval(async () => {
       const { to, from, subject, text, html } = mailQueue[i]
       sendMail(to, from, subject, text, html).then(() => {
         console.log(`[SERVICE] Verification mail to ( ${to} ) sent.`)
+        // Remove item from queue
         mailQueue.splice(mailQueue.indexOf(i), 1)
       }).catch((r) => {
         console.log(`[SERVICE] Verification mail to ( ${to} ) failed. Retrying in 5s...`)
       })
-      // Remove item from queue
     }
   }
 }, 5000)

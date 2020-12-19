@@ -20,4 +20,4 @@ COPY package.json .
 
 RUN npm install
 
-CMD node src/index.js
+CMD cd src/ && node index.js
