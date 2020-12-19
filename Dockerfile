@@ -12,7 +12,7 @@ RUN apt-get -y update
 RUN apt-get -y install git
 
 #Set better shell because /bin/sh sux and doesnt support arrow keys
-WORKDIR /src
+WORKDIR /service
 SHELL ["/bin/bash", "-c"]
 
 # Copy package.json for dependencies
@@ -20,4 +20,4 @@ COPY package.json .
 
 RUN npm install
 
-CMD node ./index.js
+CMD node src/index.js
