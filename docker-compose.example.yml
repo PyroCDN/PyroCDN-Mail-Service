@@ -1,0 +1,8 @@
+version: '3'
+services:
+  pyrocdn_mail:
+    container_name: pyrocdn-mail-service
+    ports:
+      - 4200:4200
+    volumes:
+      - ./src:/src

@@ -1,0 +1,25 @@
+{
+  "name": "pyrocdn-mail",
+  "version": "1.0.0",
+  "description": "A microservice mail handler for pyrocdn.com",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PyroCDN/PyroCDN-Mail-Service.git"
+  },
+  "author": "Luke-6723",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/PyroCDN/PyroCDN-Mail-Service/issues"
+  },
+  "homepage": "https://github.com/PyroCDN/PyroCDN-Mail-Service#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "nodemailer": "^6.4.17"
+  }
+}
