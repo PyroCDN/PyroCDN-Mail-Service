@@ -81,7 +81,7 @@ app.post('/send', (req, res) => {
   } else return res.status(403).send('Unauthorized')
 })
 
-app.get('/stats', (req, res) => {
+app.get('/metrics', (req, res) => {
   res.status(200).json({
     in_queue: mailQueue.length
   })
