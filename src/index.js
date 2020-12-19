@@ -82,9 +82,7 @@ app.post('/send', (req, res) => {
 })
 
 app.get('/metrics', (req, res) => {
-  res.status(200).json({
-    in_queue: mailQueue.length
-  })
+  res.status(200).send(`in_queue ${mailQueue.length}`)
 })
 
 app.listen(process.env.API_PORT, process.env.API_HOST)
