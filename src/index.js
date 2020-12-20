@@ -65,6 +65,7 @@ setInterval(async () => {
  * Setup API
  */
 const app = express()
+app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
 
 app.post('/send', (req, res) => {
